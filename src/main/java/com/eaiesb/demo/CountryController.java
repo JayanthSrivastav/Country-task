@@ -28,12 +28,12 @@ public class CountryController {
 	}
 	
 	@GetMapping("/country/{id}")
-	public Optional<Country> getAuditById(@PathVariable String id){
+	public Optional<Country> getCountryById(@PathVariable String id){
 		return service.getById(id);
 	}
 
 	@PostMapping("/updatecountry/{id}")
-	public Country updateAudit(@PathVariable String id, @Validated @RequestBody Country country) {
+	public Country updateCountry(@PathVariable String id, @Validated @RequestBody Country country) {
 		return service.update(id, country);
 	}
 
